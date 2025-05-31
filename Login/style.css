@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    display: flex;
+    /* background-color: #ffffff; */
+    max-width: 100%;
+    background-image: url(white.jpg);
+    
+    
+    
+}
+
+.logo{
+    flex-basis: 35%;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    /* background-image: url(book.jpg); */
+    background-size: cover;
+
+}
+img{
+    width:100%;
+    height: 50%;
+}
+.main-content{
+    width: 65%;
+    
+    
+    display: flex;
+    flex-direction: column;
+    
+    /* padding: 40px; */
+}
+.about{
+    
+   padding-bottom: 30px;
+    /* border-bottom: 1px solid black; */
+    padding: 13px 40px;
+    /* background-color: white; */
+   
+}
+.about>h1{
+    margin-bottom: 10px;
+    position: relative;
+    max-width: max-content;
+}
+.about>h1::after{
+    content: "";
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(to right, red ,blue);
+    border-radius: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 100ms;
+}
+.about>h1:hover::after{
+width: 0%;
+}
+#form{
+    padding:40px;
+    /* border-bottom: 5px solid black; */
+    /* border-bottom: 0.5px solid black; */
+    /* box-shadow: 0px 5px 18px #888888; */
+    z-index: 10;
+}
+.model{
+    display: flex;
+    gap: 40px;
+   
+    
+    
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25px;
+    
+}
+.row1{
+    width: 40%;
+    
+    
+    
+}
+.row2{
+    width: 40%;
+}
+input{
+    width: 100%;
+    padding: 12px;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    
+}
+input:hover{
+outline: 2px solid #ffb300;
+}
+
+.btn{
+    padding: 10px 20px;
+    background-color: rgb(51, 218, 51);
+    border-radius: 4px;
+    border: none;
+    color: white;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    /* background-color: white; */
+}
+.btn2{
+    padding: 12px;
+    background-color: rgb(1, 13, 30);
+    border: none;
+    font-weight: bold;
+    border-radius: 2px;
+    color: white;
+    z-index: 0;
+    position: relative;
+    cursor: pointer;
+}
+.btn2::after{
+    content: "";
+    height: 100%;
+    border-radius: 2px;
+    background: linear-gradient(to right,#ffee00,#ffb300);
+    position: absolute;
+    width: 0%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 100ms ease-in-out;
+
+}
+.btn2:hover::after{
+    width: 100%;
+    
+}
+.btn2:hover{
+    color: black;
+}
+.icon button{
+    
+border: none; 
+margin-right: 10px;
+}
+.icon i{
+    padding: 10px;
+    background-color: rgb(23, 6, 6);
+    font-size: 18px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+}
+@media only screen and (min-width:200px) and (max-width:575px){
+  .container{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .logo{
+    width: 100%;
+    display: block;
+    height: 100%;
+  }
+  .main-content{
+    width: 100%;
+    
+  }
+}
+@media only screen and (min-width:575px) and (max-width:991px){
+  .container{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .logo{
+    width: 100%;
+    display: block;
+    height: 100%;
+  }
+  .main-content{
+    width: 100%;
+    
+  }
+}
