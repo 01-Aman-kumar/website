@@ -36,12 +36,15 @@ button.addEventListener("click",(e)=>{
 
 // show and hide model
 let login=document.querySelector(".login");
-let model=document.querySelector(".model")
-login.addEventListener("click",()=>{
-    model.classList.toggle("hidemodel")
-})
+let model=document.querySelector(".model");
+setTimeout(()=>{
+    model.classList.add("showmodel")
+},2000)
 let rmbtn=document.querySelector(".rm");
 rmbtn.addEventListener("click",(e)=>{
     e.preventDefault();
-    model.classList.add("hidemodel")
+    model.classList.remove("showmodel")
+})
+login.addEventListener("click",()=>{
+    model.classList.toggle("showmodel")
 })
